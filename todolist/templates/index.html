@@ -1,0 +1,28 @@
+{% extends "base_template.html" %}
+
+{% block title %}<title>ToDoリスト</title>{% endblock %}
+
+{% block content %}
+<h1>ToDoリスト</h1>
+<p>ようこそ{{ user.get_username }}</p>
+<a href="{% url 'logout' %}?next={% url 'index' %}">あなたは{{ user.get_username }}ではありませんか？</a>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="タスクを追加">
+</form>
+
+<ul>
+
+    {% for task in all_task %}
+        <li>{{task.content}}</li>
+        <button onclick="location.href='{{ task.id }}/update/'">編集</button>
+        <button onclick="location.href='{{ task.id }}/delete/'">削除</button>
+    {% endfor %}
+
+</ul>
+
+{% endblock %}

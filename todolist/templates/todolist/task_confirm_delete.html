@@ -1,0 +1,16 @@
+{% extends "base_template.html" %}
+
+{% block title %}<title>タスク削除確認ページ</title>{% endblock %}
+
+{% block content %}
+
+    <h1>タスク削除ページ</h1>
+
+    <p>本当にタスク: {{ task }}を削除してよろしいですか？</p>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="submit" value="タスクを削除する">
+    </form>
+
+{% endblock %}

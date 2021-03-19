@@ -1,0 +1,17 @@
+{% extends "base_template.html" %}
+
+{% block title %}<title>タスク編集ページ</title>{% endblock %}
+
+{% block content %}
+
+    <h1>タスク編集ページ</h1>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+        {{ form.as_table }}
+        </table>
+        <input type="submit" value="タスクを編集する">
+    </form>
+
+{% endblock %}
