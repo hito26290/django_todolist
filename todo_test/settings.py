@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'c*!#9^8ta!1-@v7ncaym8e)h+66k$f
 
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['murmuring-brushlands-44984.herokuapp.com/.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['murmuring-brushlands-44984.herokuapp.com','127.0.0.1']
 
 
 # Application definition
